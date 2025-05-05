@@ -1,0 +1,226 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    min-height: 100vh;
+}
+
+/* Outline Sidebar */
+.outline-sidebar {
+    position: sticky;
+    top: 20px;
+    align-self: start;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+    margin: 20px;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+}
+
+.outline-title {
+    color: #4a6bff;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    font-size: 1.2em;
+}
+
+.outline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.outline-list li {
+    margin-bottom: 8px;
+}
+
+.outline-list a {
+    color: #555;
+    text-decoration: none;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.outline-list a:hover {
+    background-color: #f0f5ff;
+    color: #4a6bff;
+    border-left: 3px solid #4a6bff;
+}
+
+.outline-list ul {
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 5px;
+    border-left: 1px dashed #ddd;
+}
+
+.outline-list ul a {
+    font-size: 0.9em;
+    padding: 5px 10px;
+}
+
+/* Main Content */
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 3px solid #4a6bff;
+    margin: 20px 20px 20px 0;
+    position: relative;
+}
+
+h1 {
+    color: #4a6bff;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px dashed rgba(74, 107, 255, 0.3);
+}
+
+h2 {
+    color: #ff6b6b;
+    background-color: #fff4f4;
+    padding: 10px 15px;
+    border-left: 5px solid #ff6b6b;
+    border-radius: 0 5px 5px 0;
+    margin-top: 40px;
+}
+
+h3 {
+    color: #4a6bff;
+    background-color: #f0f5ff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 25px;
+    border: 2px dotted #4a6bff;
+}
+
+.featured-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 5px solid #4a6bff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+ul, ol {
+    background-color: #f9f9f9;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.expert-quote {
+    background-color: #f0f5ff;
+    border-left: 5px solid #4a6bff;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 0 10px 10px 0;
+    font-style: italic;
+    position: relative;
+}
+
+.expert-quote::before {
+    content: """;
+    font-size: 4em;
+    color: rgba(74, 107, 255, 0.1);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.verdict-list {
+    background-color: #f0f5ff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border-left: 5px solid #4a6bff;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, #f0f5ff, #ffffff);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(74, 107, 255, 0.3);
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4a6bff 0%, #ff6b6b 50%, #4a6bff 100%);
+}
+
+.cta-link {
+    background-color: #4a6bff;
+    color: white !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-bottom: none !important;
+}
+
+.cta-link:hover {
+    background-color: #3a5bef;
+}
+
+.disclaimer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 40px;
+    border-left: 5px solid #ff6b6b;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+    
+    .outline-sidebar {
+        position: static;
+        height: auto;
+        margin: 20px;
+    }
+    
+    .container {
+        margin: 0 20px 20px;
+    }
+}
